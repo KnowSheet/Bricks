@@ -81,6 +81,7 @@ TEST(VectorClock, Merge) {
 }
 
 TEST(VectorClock, ContinuousTime) {
+  current::time::ResetToZero();
   current::time::SetNow(0us, 1000us);
   auto base_time = current::time::Now();
   ContinuousClocks c1 = {base_time, base_time + 100us};
