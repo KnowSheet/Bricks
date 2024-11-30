@@ -173,7 +173,7 @@ touch CMakeLists.txt
 echo
 
 echo "::group::release_test"
-make test
+make release_test
 echo "::endgroup::"
 
 echo "::group::debug_test"
@@ -185,14 +185,14 @@ echo
 touch src/test_gtest.cc
 T0_GTEST=$(date +%s)
 echo "::group::one line change google gtest release"
-make test
+make release_test
 echo "::endgroup::"
 T1_GTEST=$(date +%s)
 
 touch src/test_current_gtest.cc
 T0_CURRENT_GTEST=$(date +%s)
 echo "::group::one line change current gtest release"
-make test
+make release_test
 echo "::endgroup::"
 T1_CURRENT_GTEST=$(date +%s)
 
@@ -269,7 +269,6 @@ touch CMakeLists.txt
 echo "::group::build .current/libdlib_mul.{so|dylib} and .current/call_dynamic_mul"
 make
 echo "::endgroup::"
-
 echo "::group::build .current_debug/libdlib_mul.{so|dylib} and .current_debug/call_dynamic_mul"
 make debug
 echo "::endgroup::"
