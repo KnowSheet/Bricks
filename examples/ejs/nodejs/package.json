@@ -35,6 +35,6 @@
   "dependencies": {
     "body-parser": "1.15.2",
     "ejs": "3.1.7",
-    "express": "4.14.0"
+    "express": "4.19.2"
   }
 }
